@@ -1,0 +1,1659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	">
+
+	<!-- User accounts -->
+
+	<bean id="userAccount1" class="security.UserAccount">
+		<property name="username" value="admin" />
+		<property name="password" value="dab841a044dc1d311822d11bcf81fc0f" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMIN" />
+				</bean>
+			</list>
+		</property>
+		<property name="enabled" value="true" />
+	</bean>
+
+	<bean id="userAccount2" class="security.UserAccount">
+		<property name="username" value="gohan" />
+		<property name="password" value="0900e473bbbf9ba522acdb4ad3c9371a" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="TOURFRIEND" />
+				</bean>
+			</list>
+		</property>
+		<property name="enabled" value="true" />
+	</bean>
+	<bean id="userAccount3" class="security.UserAccount">
+		<property name="username" value="peter" />
+		<property name="password" value="4a2b1346547d7d23ed7c6525f7efb333" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="TOURFRIEND" />
+				</bean>
+			</list>
+		</property>
+		<property name="enabled" value="true" />
+	</bean>
+	<bean id="userAccount4" class="security.UserAccount">
+		<property name="username" value="johnn" />
+		<property name="password" value="0132ed882c07be914e5e0c3b86d1edf1" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="TOURFRIEND" />
+				</bean>
+			</list>
+		</property>
+		<property name="enabled" value="true" />
+	</bean>
+	<bean id="userAccount5" class="security.UserAccount">
+		<property name="username" value="alantur" />
+		<property name="password" value="a63899c3d4505461a65b563c22990244" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="TOURFRIEND" />
+				</bean>
+			</list>
+		</property>
+		<property name="enabled" value="true" />
+	</bean>
+
+	<bean id="userAccount6" class="security.UserAccount">
+		<property name="username" value="melisa" />
+		<property name="password" value="bb6807e107831cd43de4a91025e775f1" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="TOURFRIEND" />
+				</bean>
+			</list>
+		</property>
+		<property name="enabled" value="true" />
+	</bean>
+
+
+	<bean id="userAccount7" class="security.UserAccount">
+		<property name="username" value="jacks" />
+		<property name="password" value="896ad1e4dd74c51fa20f2089f34442b2" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="TOURFRIEND" />
+				</bean>
+			</list>
+		</property>
+		<property name="enabled" value="true" />
+	</bean>
+	
+	<bean id="userAccount8" class="security.UserAccount">
+		<property name="username" value="josandluq" />
+		<property name="password" value="b479c512c0478b4fe32d8ebb368f359e" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="TOURFRIEND" />
+				</bean>
+			</list>
+		</property>
+		<property name="enabled" value="true" />
+	</bean>
+
+	<!-- TourFriend ADMINISTRADOR -->
+	<bean id="tourfriend0" class="domain.TourFriend">
+		<property name="firstName" value="Administrador" />
+		<property name="lastName" value="MR" />
+		<property name="phone" value="600999888" />
+		<property name="userAccount" ref="userAccount1" />
+		<property name="email" value="alexmurillo01@hotmail.com" />
+		<property name="availableBalance" value="10000.00" />
+		<property name="availablePoints" value="10000" />
+		<property name="aboutMe" value="About tourFriend1" />
+		<property name="dateOfBirth" value="03/10/1991" />
+		<property name="image"
+			value="http://www.imagen.com.mx/assets/img/imagen_share.png" />
+		<property name="bookings">
+			<list>
+			</list>
+		</property>
+		<property name="languages">
+			<list>
+			</list>
+		</property>
+		<property name="myCommentTourFriends">
+			<list>
+			</list>
+		</property>
+		<property name="myCommentEvents">
+			<list>
+			</list>
+		</property>
+		<property name="commentTourFriends">
+			<list>
+			</list>
+		</property>
+		<property name="couponTourFriends">
+			<list>
+			</list>
+		</property>
+		<property name="pois">
+			<list>
+			</list>
+		</property>
+		<property name="events">
+			<list>
+			</list>
+		</property>
+		<property name="myRoutes">
+			<list>
+			</list>
+		</property>
+		<property name="favouriteRoutes">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<!-- COMMENT_TOUR_FRIEND -->
+
+	<bean id="commenttourfriend1" class="domain.CommentTourFriend">
+		<property name="description"
+			value="Un deportista de elite, y buen tutor, disfrute mucho la ruta que hice con el" />
+		<property name="score" value="3" />
+		<property name="creationMoment" value="03/03/2017 12:00" />
+		<property name="tourFriendCreator" ref="tourfriend3" />
+		<property name="tourFriend" ref="tourfriend2" />
+	</bean>
+
+	<bean id="commenttourfriend2" class="domain.CommentTourFriend">
+		<property name="description"
+			value="A pesar de parecer estirado es muy buena persona, y un gran ciclista" />
+		<property name="score" value="3" />
+		<property name="creationMoment" value="03/03/2017 12:03" />
+		<property name="tourFriendCreator" ref="tourfriend2" />
+		<property name="tourFriend" ref="tourfriend3" />
+	</bean>
+
+	<bean id="commenttourfriend3" class="domain.CommentTourFriend">
+		<property name="description" value="Cocina estupendamente" />
+		<property name="score" value="3" />
+		<property name="creationMoment" value="03/03/2017 12:20" />
+		<property name="tourFriendCreator" ref="tourfriend3" />
+		<property name="tourFriend" ref="tourfriend2" />
+	</bean>
+
+
+
+	<!-- COMMENTEVENT -->
+
+
+	<bean id="commentevent1" class="domain.CommentEvent">
+		<property name="description" value="Una evento para los amantes del deporte" />
+		<property name="score" value="5" />
+		<property name="creationMoment" value="02/03/2017" />
+		<property name="tourFriendCreator" ref="tourfriend3" />
+		<property name="event" ref="event1" />
+	</bean>
+
+	<!-- COUPONTOURFRIEND -->
+
+	<bean id="coupontourfriend1" class="domain.CouponTourFriend">
+		<property name="name" value="Coupon1" />
+		<property name="description" value="Descripcion coupon1" />
+		<property name="value" value="10.50" />
+		<property name="isUsed" value="false" />
+		<property name="tourFriend" ref="tourfriend1" />
+	</bean>
+
+	<bean id="coupontourfriend2" class="domain.CouponTourFriend">
+		<property name="name" value="Coupon2" />
+		<property name="description" value="Descripcion coupon2" />
+		<property name="value" value="150.20" />
+		<property name="isUsed" value="true" />
+		<property name="tourFriend" ref="tourfriend1" />
+	</bean>
+
+	<bean id="coupontourfriend3" class="domain.CouponTourFriend">
+		<property name="name" value="Coupon3" />
+		<property name="description" value="Descripcion coupon3" />
+		<property name="value" value="0.50" />
+		<property name="isUsed" value="false" />
+		<property name="tourFriend" ref="tourfriend1" />
+	</bean>
+	
+	<!-- TOURFRIENDS -->
+
+
+	<bean id="tourfriend1" class="domain.TourFriend">
+		<property name="firstName" value="Gohan el rey de Angular" />
+		<property name="lastName" value="El rey de Angular" />
+		<property name="phone" value="666333666" />
+		<property name="userAccount" ref="userAccount2" />
+		<property name="email" value="gohan@gmail.com" />
+		<property name="availableBalance" value="20.00" />
+		<property name="availablePoints" value="5" />
+		<property name="aboutMe" value="About tourFriend1" />
+		<property name="dateOfBirth" value="03/10/1991" />
+		<property name="image"
+			value="http://www.imagen.com.mx/assets/img/imagen_share.png" />
+		<property name="bookings">
+			<list>
+				<ref bean="booking1" />
+			</list>
+		</property>
+		<property name="languages">
+			<list>
+			</list>
+		</property>
+
+		<property name="myCommentTourFriends">
+			<list>
+			</list>
+		</property>
+		<property name="myCommentEvents">
+			<list>
+			</list>
+		</property>
+		<property name="commentTourFriends">
+			<list>
+			</list>
+		</property>
+		<property name="couponTourFriends">
+			<list>
+				<ref bean="coupontourfriend1" />
+				<ref bean="coupontourfriend2" />
+				<ref bean="coupontourfriend3" />
+			</list>
+		</property>
+		<property name="pois">
+			<list>
+			</list>
+		</property>
+		<property name="events">
+			<list>
+			</list>
+		</property>
+		<property name="myRoutes">
+			<list>
+			</list>
+		</property>
+		<property name="favouriteRoutes">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="tourfriend2" class="domain.TourFriend">
+		<property name="firstName" value="Peter" />
+		<property name="lastName" value="El ciclista" />
+		<property name="phone" value="666333666" />
+		<property name="userAccount" ref="userAccount3" />
+		<property name="email" value="antonioespinosa13.ae@gmail.com" />
+		<property name="availableBalance" value="5.00" />
+		<property name="availablePoints" value="5" />
+		<property name="aboutMe"
+			value="Cilista de montaña amateur, 30 años bajando montañas a 80km/h" />
+		<property name="dateOfBirth" value="07/12/1995" />
+		<property name="image" value="http://i.imgur.com/mCFrLuQ.png" />
+		<property name="bookings">
+			<list>
+			</list>
+		</property>
+		<property name="languages">
+			<list>
+				<ref bean="language1" />
+				<ref bean="language3" />
+			</list>
+		</property>
+
+		<property name="myCommentTourFriends">
+			<list>
+				<ref bean="commenttourfriend2" />
+			</list>
+		</property>
+		<property name="myCommentEvents">
+			<list>
+
+			</list>
+		</property>
+		<property name="commentTourFriends">
+			<list>
+				<ref bean="commenttourfriend1" />
+				<ref bean="commenttourfriend3" />
+			</list>
+		</property>
+		<property name="couponTourFriends">
+			<list>
+			</list>
+		</property>
+		<property name="pois">
+			<list>
+				<ref bean="poi1" />
+				<ref bean="poi2" />
+				<ref bean="poi3" />
+				<ref bean="poi4" />
+				<ref bean="poi5" />
+			</list>
+		</property>
+		<property name="events">
+			<list>
+				<ref bean="event1" />
+				<ref bean="event2" />
+				<ref bean="event3" />
+			</list>
+		</property>
+		<property name="myRoutes">
+			<list>
+				<ref bean="route1" />
+				<ref bean="route2" />
+			</list>
+		</property>
+		<property name="favouriteRoutes">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="tourfriend3" class="domain.TourFriend">
+		<property name="firstName" value="John" />
+		<property name="lastName" value="El ajetreado" />
+		<property name="phone" value="666333666" />
+		<property name="userAccount" ref="userAccount4" />
+		<property name="email" value="john@gmail.com" />
+		<property name="availableBalance" value="0.00" />
+		<property name="availablePoints" value="5" />
+		<property name="aboutMe"
+			value="Trabajo mucho y tengo poco descanso, me encantaria beber cervezas y bajar montañas a 80km/h" />
+		<property name="dateOfBirth" value="05/10/1900" />
+		<property name="image" value="http://i.imgur.com/liHIpig.png" />
+		<property name="bookings">
+			<list>
+			</list>
+		</property>
+		<property name="languages">
+			<list>
+				<ref bean="language2" />
+				<ref bean="language3" />
+			</list>
+		</property>
+
+		<property name="myCommentTourFriends">
+			<list>
+				<ref bean="commenttourfriend1" />
+				<ref bean="commenttourfriend3" />
+			</list>
+		</property>
+		<property name="myCommentEvents">
+			<list>
+				<ref bean="commentevent1" />
+			</list>
+		</property>
+		<property name="commentTourFriends">
+			<list>
+				<ref bean="commenttourfriend2" />
+			</list>
+		</property>
+		<property name="couponTourFriends">
+			<list>
+			</list>
+		</property>
+		<property name="pois">
+			<list>
+			</list>
+		</property>
+		<property name="events">
+			<list>
+			</list>
+		</property>
+		<property name="myRoutes">
+			<list>
+			</list>
+		</property>
+		<property name="favouriteRoutes">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="tourfriend4" class="domain.TourFriend">
+		<property name="firstName" value="Alan" />
+		<property name="lastName" value="Turner" />
+		<property name="phone" value="666333666" />
+		<property name="userAccount" ref="userAccount5" />
+		<property name="email" value="alan@gmail.com" />
+		<property name="availableBalance" value="0.0" />
+		<property name="availablePoints" value="0" />
+		<property name="aboutMe"
+			value="Me encanta viajar y conocer lugares nuevos de la mano de personas que aman su pueblo. Además me gusta enseñar las partes mas encondidas de Córdoba" />
+		<property name="dateOfBirth" value="3/1/1991" />
+		<property name="image"
+			value="https://pickaface.net/assets/images/slides/slide2.png" />
+		<property name="bookings">
+			<list>
+			</list>
+		</property>
+		<property name="languages">
+			<list>
+				<ref bean="language1" />
+			</list>
+		</property>
+
+		<property name="myCommentTourFriends">
+			<list>
+
+			</list>
+		</property>
+		<property name="myCommentEvents">
+			<list>
+
+			</list>
+		</property>
+		<property name="commentTourFriends">
+			<list>
+
+			</list>
+		</property>
+		<property name="couponTourFriends">
+			<list>
+			</list>
+		</property>
+		<property name="pois">
+			<list>
+				<ref bean="poi6" />
+				<ref bean="poi7" />
+				<ref bean="poi8" />
+				<ref bean="poi9" />
+			</list>
+		</property>
+		<property name="events">
+			<list>
+				<ref bean="event4" />
+				<ref bean="event5" />
+				<ref bean="event6" />
+			</list>
+		</property>
+		<property name="myRoutes">
+			<list>
+				<ref bean="route3" />
+				<ref bean="route4" />
+			</list>
+		</property>
+		<property name="favouriteRoutes">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="tourfriend5" class="domain.TourFriend">
+		<property name="firstName" value="Melisa" />
+		<property name="lastName" value="Ersa" />
+		<property name="phone" value="666333666" />
+		<property name="userAccount" ref="userAccount6" />
+		<property name="email" value="meli@gmail.com" />
+		<property name="availableBalance" value="0.0" />
+		<property name="availablePoints" value="0" />
+		<property name="aboutMe"
+			value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+		<property name="dateOfBirth" value="7/7/1991" />
+		<property name="image"
+			value="http://bootdey.com/img/Content/avatar/avatar5.png" />
+		<property name="bookings">
+			<list>
+
+			</list>
+		</property>
+		<property name="languages">
+			<list>
+
+			</list>
+		</property>
+
+		<property name="myCommentTourFriends">
+			<list>
+
+			</list>
+		</property>
+		<property name="myCommentEvents">
+			<list>
+
+			</list>
+		</property>
+		<property name="commentTourFriends">
+			<list>
+
+			</list>
+		</property>
+		<property name="couponTourFriends">
+			<list>
+			</list>
+		</property>
+		<property name="pois">
+			<list>
+			</list>
+		</property>
+		<property name="events">
+			<list>
+			</list>
+		</property>
+		<property name="myRoutes">
+			<list>
+			</list>
+		</property>
+		<property name="favouriteRoutes">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+
+
+	<bean id="tourfriend6" class="domain.TourFriend">
+		<property name="firstName" value="Jack" />
+		<property name="lastName" value="Sparrow" />
+		<property name="phone" value="666333666" />
+		<property name="userAccount" ref="userAccount7" />
+		<property name="email" value="jack@gmail.com" />
+		<property name="availableBalance" value="0.0" />
+		<property name="availablePoints" value="0" />
+		<property name="aboutMe"
+			value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+		<property name="dateOfBirth" value="7/7/1991" />
+		<property name="image"
+			value="https://pickaface.net/gallery/avatar/unr_avatar1_160809_2337_c8c0.png" />
+		<property name="bookings">
+			<list>
+
+			</list>
+		</property>
+		<property name="languages">
+			<list>
+
+			</list>
+		</property>
+
+		<property name="myCommentTourFriends">
+			<list>
+
+			</list>
+		</property>
+		<property name="myCommentEvents">
+			<list>
+
+			</list>
+		</property>
+		<property name="commentTourFriends">
+			<list>
+
+			</list>
+		</property>
+		<property name="couponTourFriends">
+			<list>
+			</list>
+		</property>
+		<property name="pois">
+			<list>
+			</list>
+		</property>
+		<property name="events">
+			<list>
+			</list>
+		</property>
+		<property name="myRoutes">
+			<list>
+			</list>
+		</property>
+		<property name="favouriteRoutes">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="tourfriend7" class="domain.TourFriend">
+		<property name="firstName" value="Jose Antonio" />
+		<property name="lastName" value="Andujar" />
+		<property name="phone" value="603515822" />
+		<property name="userAccount" ref="userAccount8" />
+		<property name="email" value="josandluq@alum.us.es" />
+		<property name="availableBalance" value="50.00" />
+		<property name="availablePoints" value="5" />
+		<property name="aboutMe" value="Soy una persona agradable, educacada y formal enamorada de mi pueblo y sus encantos." />
+		<property name="dateOfBirth" value="03/03/1994" />
+		<property name="image"
+			value="http://www.imagen.com.mx/assets/img/imagen_share.png" />
+		<property name="bookings">
+			<list>
+				
+			</list>
+		</property>
+		<property name="languages">
+			<list>
+				<ref bean="language1" />
+			</list>
+		</property>
+
+		<property name="myCommentTourFriends">
+			<list>
+			</list>
+		</property>
+		<property name="myCommentEvents">
+			<list>
+			</list>
+		</property>
+		<property name="commentTourFriends">
+			<list>
+			</list>
+		</property>
+		<property name="couponTourFriends">
+			<list>
+			</list>
+		</property>
+		<property name="pois">
+			<list>
+			</list>
+		</property>
+		<property name="events">
+			<list>
+			</list>
+		</property>
+		<property name="myRoutes">
+			<list>
+			</list>
+		</property>
+		<property name="favouriteRoutes">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<!-- LANGUAGE -->
+	<bean id="language1" class="domain.Language">
+		<property name="name" value="SPANISH" />
+		<property name="tourFriends" ref="tourfriend2" />
+	</bean>
+
+	<bean id="language2" class="domain.Language">
+		<property name="name" value="SPANISH" />
+		<property name="tourFriends" ref="tourfriend3" />
+	</bean>
+
+	<bean id="language3" class="domain.Language">
+		<property name="name" value="ENGLISH" />
+		<property name="tourFriends" ref="tourfriend3" />
+	</bean>
+
+	<!-- POI -->
+
+
+	<bean id="poi1" class="domain.Poi">
+		<property name="description" value="Monasterio de Santa Clara" />
+		<property name="name" value="Monasterio de Santa Clara" />
+		<property name="place" value="Cazalla de la Sierra" />
+		<property name="photos">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriendCreator" ref="tourfriend2" />
+		<property name="routes">
+			<list>
+				<ref bean="route1" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="poi2" class="domain.Poi">
+		<property name="description" value="Convento de San Agustin" />
+		<property name="name" value="Convento de San Agustin" />
+		<property name="place" value="Cazalla de la Sierra" />
+		<property name="photos">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriendCreator" ref="tourfriend2" />
+		<property name="routes">
+			<list>
+				<ref bean="route1" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="poi3" class="domain.Poi">
+		<property name="description" value="Torre del oro" />
+		<property name="name" value="Torre del oro" />
+		<property name="place" value="Sevilla" />
+		<property name="photos">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriendCreator" ref="tourfriend2" />
+		<property name="routes">
+			<list>
+				<ref bean="route2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="poi4" class="domain.Poi">
+		<property name="description" value="Barrio de Santa Cruz" />
+		<property name="name" value="Barrio de Santa Cruz" />
+		<property name="place" value="Sevilla" />
+		<property name="photos">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriendCreator" ref="tourfriend2" />
+		<property name="routes">
+			<list>
+				<ref bean="route2" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="poi5" class="domain.Poi">
+		<property name="description" value="Bar Blanco Cerillo" />
+		<property name="name" value="Bar Blanco Cerillo" />
+		<property name="place" value="Sevilla" />
+		<property name="photos">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriendCreator" ref="tourfriend2" />
+		<property name="routes">
+			<list>
+				<ref bean="route2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="poi6" class="domain.Poi">
+		<property name="description" value="Mezquita Catedral" />
+		<property name="name" value="Mezquita Catedral" />
+		<property name="place" value="Córdoba" />
+		<property name="photos">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriendCreator" ref="tourfriend4" />
+		<property name="routes">
+			<list>
+				<ref bean="route3" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="poi7" class="domain.Poi">
+		<property name="description" value="Puente Romano" />
+		<property name="name" value="Puente Romano" />
+		<property name="place" value="Córdoba" />
+		<property name="photos">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriendCreator" ref="tourfriend4" />
+		<property name="routes">
+			<list>
+				<ref bean="route3" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="poi8" class="domain.Poi">
+		<property name="description" value="Judería" />
+		<property name="name" value="Judería" />
+		<property name="place" value="Córdoba" />
+		<property name="photos">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriendCreator" ref="tourfriend4" />
+		<property name="routes">
+			<list>
+				<ref bean="route3" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="poi9" class="domain.Poi">
+		<property name="description" value="Casa de los fresnos" />
+		<property name="name" value="Casa de los fresnos" />
+		<property name="place" value="Córdoba" />
+		<property name="photos">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriendCreator" ref="tourfriend4" />
+		<property name="routes">
+			<list>
+				<ref bean="route4" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="poi10" class="domain.Poi">
+		<property name="description" value="Monumento conocido nacionalmente por ser protagonista de una antigua historia española" />
+		<property name="name" value="Monumento del Gallo de Moron" />
+		<property name="place" value="Paseo la Alameda, Morón de la Frontera, Spain" />
+		<property name="photos">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriendCreator" ref="tourfriend7" />
+		<property name="routes">
+			<list>
+				<ref bean="route5" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="poi11" class="domain.Poi">
+		<property name="description" value="Iglesia de inicios de la Edad moderna que es conocida como la Catedral de Morón" />
+		<property name="name" value="Iglesia de San Miguel" />
+		<property name="place" value="Calle San Miguel, Morón de la Frontera, Spain" />
+		<property name="photos">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriendCreator" ref="tourfriend7" />
+		<property name="routes">
+			<list>
+				<ref bean="route5" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="poi12" class="domain.Poi">
+		<property name="description" value="El castillo de Morón de la Frontera se alza sobre una colina de 300 metros situada en el centro de la localidad del mismo nombre" />
+		<property name="name" value="Castillo de Morón de la Frontera" />
+		<property name="place" value="Castillo de Morón, Morón de la Frontera, Spain" />
+		<property name="photos">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriendCreator" ref="tourfriend7" />
+		<property name="routes">
+			<list>
+				<ref bean="route5" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- ROUTE -->
+
+	<bean id="route1" class="domain.Route">
+		<property name="name" value="Descenso Montaña" />
+		<property name="description"
+			value="Descenso de la montaña en bicicleta y barbacoa" />
+		<property name="isDisabled" value="false" />
+		<property name="city" value="Cazalla de la sierra" />
+		<property name="events">
+			<list>
+				<ref bean="event1" />
+				<ref bean="event2" />
+				<ref bean="event3" />
+			</list>
+		</property>
+		<property name="pois">
+			<list>
+				<ref bean="poi1" />
+				<ref bean="poi2" />
+			</list>
+		</property>
+		<property name="categories" ref="category1" />
+		<property name="tourFriendCreator" ref="tourfriend2" />
+		<property name="favouriteTourFriends">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="route2" class="domain.Route">
+		<property name="name" value="Visita por el centro de Sevilla" />
+		<property name="description"
+			value="Visitaremos el centro histórico de Sevilla, así como las calles más conocidas del Barrio Santa Cruz. Para finalizar nos tomaremos una cerveza en uno de los bares más emblimáticos de la ciudad." />
+		<property name="isDisabled" value="true" />
+		<property name="city" value="Sevilla" />
+		<property name="events">
+			<list>
+			</list>
+		</property>
+		<property name="pois">
+			<list>
+				<ref bean="poi3" />
+				<ref bean="poi4" />
+				<ref bean="poi5" />
+			</list>
+		</property>
+		<property name="categories" ref="category2" />
+		<property name="tourFriendCreator" ref="tourfriend2" />
+		<property name="favouriteTourFriends">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="route3" class="domain.Route">
+		<property name="name" value="Córdoba, la ciudad califal" />
+		<property name="description"
+			value="Conozca los lugares más interesantes de Córdoba, ciudad con una gran valor histórico" />
+		<property name="isDisabled" value="false" />
+		<property name="city" value="Córdoba" />
+		<property name="events">
+			<list>
+				<ref bean="event4" />
+				<ref bean="event5" />
+			</list>
+		</property>
+		<property name="pois">
+			<list>
+				<ref bean="poi6" />
+				<ref bean="poi7" />
+				<ref bean="poi8" />
+			</list>
+		</property>
+		<property name="categories" ref="category2" />
+		<property name="tourFriendCreator" ref="tourfriend4" />
+		<property name="favouriteTourFriends">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="route4" class="domain.Route">
+		<property name="name" value="Córdoba ciclista" />
+		<property name="description"
+			value="Recorreremos los lugares más bonitos de la Sierra de Córdoba, siempre junto a nuestra bici" />
+		<property name="isDisabled" value="false" />
+		<property name="city" value="Córdoba" />
+		<property name="events">
+			<list>
+				<ref bean="event6" />
+			</list>
+		</property>
+		<property name="pois">
+			<list>
+				<ref bean="poi9" />
+			</list>
+		</property>
+		<property name="categories" ref="category1" />
+		<property name="tourFriendCreator" ref="tourfriend4" />
+		<property name="favouriteTourFriends">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="route5" class="domain.Route">
+		<property name="name" value="Pueblo encantador de la Sierra Sur de Sevilla" />
+		<property name="description"
+			value="Pueblo encantador de la Sierra Sur de Sevilla conocido nacionalmente por la leyenda del Gallo de Morón" />
+		<property name="isDisabled" value="false" />
+		<property name="city" value="Morón de la Frontera, Spain" />
+		<property name="events">
+			<list>
+				<ref bean="event7" />
+				<ref bean="event8" />
+				<ref bean="event9" />
+			</list>
+		</property>
+		<property name="pois">
+			<list>
+				<ref bean="poi10" />
+				<ref bean="poi11" />
+				<ref bean="poi12" />
+			</list>
+		</property>
+		<property name="categories" ref="category4" />
+		<property name="tourFriendCreator" ref="tourfriend7" />
+		<property name="favouriteTourFriends">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<!-- CATEGORY -->
+
+	<bean id="category1" class="domain.Category">
+		<property name="name" value="Deportes" />
+		<property name="routes">
+			<list>
+				<ref bean="route1" />
+				<ref bean="route4" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="category2" class="domain.Category">
+		<property name="name" value="Senderismo" />
+		<property name="routes">
+			<list>
+				<ref bean="route2" />
+				<ref bean="route3" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="category3" class="domain.Category">
+		<property name="name" value="Conducción" />
+		<property name="routes">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="category4" class="domain.Category">
+		<property name="name" value="Turismo" />
+		<property name="routes">
+			<list>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="category5" class="domain.Category">
+		<property name="name" value="Ocio" />
+		<property name="routes">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<!-- EVENTS -->
+
+	<bean id="event1" class="domain.Event">
+		<property name="name"
+			value="Ruta en bici por los monumentos de Cazalla de la Sierra" />
+		<property name="overview"
+			value="Visitaremos algunas de las iglesias y monasterios de la ciudad." />
+		<property name="price" value="14.00" />
+		<property name="meetingPoint" value="Cerro del hierro" />
+		<property name="minPeople" value="1" />
+		<property name="maxPeople" value="5" />
+		<property name="date" value="01/02/2017 20:00:00" />
+		<property name="duration" value="2.0" />
+		<property name="isCancelled" value="false" />
+		<property name="thingsToNote"
+			value="No es necesario traer su propia bicicleta, pero si ropa adecuada" />
+		<property name="commentEvents">
+			<list>
+			</list>
+		</property>
+		<property name="bookings">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriend" ref="tourfriend2" />
+		<property name="route" ref="route1" />
+	</bean>
+	
+	<bean id="event2" class="domain.Event">
+		<property name="name"
+			value="Ruta en bici por los monumentos de Cazalla de la Sierra" />
+		<property name="overview"
+			value="Visitaremos algunas de las iglesias y monasterios de la ciudad." />
+		<property name="price" value="12.00" />
+		<property name="meetingPoint" value="Cerro del hierro" />
+		<property name="minPeople" value="2" />
+		<property name="maxPeople" value="10" />
+		<property name="date" value="01/06/2017 10:30:00" />
+		<property name="duration" value="2.0" />
+		<property name="isCancelled" value="false" />
+		<property name="thingsToNote"
+			value="No es necesario traer su propia bicicleta, pero si ropa adecuada" />
+		<property name="commentEvents">
+			<list>
+			</list>
+		</property>
+		<property name="bookings">
+			<list>
+				<ref bean="booking1" />
+			</list>
+		</property>
+		<property name="tourFriend" ref="tourfriend2" />
+		<property name="route" ref="route1" />
+	</bean>
+	
+	<bean id="event3" class="domain.Event">
+		<property name="name"
+			value="Ruta en bici por los monumentos de Cazalla de la Sierra" />
+		<property name="overview"
+			value="Visitaremos algunas de las iglesias y monasterios de la ciudad." />
+		<property name="price" value="18.00" />
+		<property name="meetingPoint" value="Cerro del hierro" />
+		<property name="minPeople" value="1" />
+		<property name="maxPeople" value="5" />
+		<property name="date" value="05/29/2017 10:30:00" />
+		<property name="duration" value="2.0" />
+		<property name="isCancelled" value="true" />
+		<property name="thingsToNote"
+			value="No es necesario traer su propia bicicleta, pero si ropa adecuada" />
+		<property name="commentEvents">
+			<list>
+			</list>
+		</property>
+		<property name="bookings">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriend" ref="tourfriend2" />
+		<property name="route" ref="route1" />
+	</bean>
+
+	<bean id="event4" class="domain.Event">
+		<property name="name"
+			value="Córdoba califal" />
+		<property name="overview"
+			value="Visitaremos el centro histórico de Córdoba, así como perdernos por las calles de la judería." />
+		<property name="price" value="21.00" />
+		<property name="meetingPoint" value="Puente Romano" />
+		<property name="minPeople" value="5" />
+		<property name="maxPeople" value="15" />
+		<property name="date" value="01/20/2017 15:00:00" />
+		<property name="duration" value="4.0" />
+		<property name="isCancelled" value="false" />
+		<property name="thingsToNote"
+			value="Ropa cómoda para andar por la ciudad" />
+		<property name="commentEvents">
+			<list>
+			</list>
+		</property>
+		<property name="bookings">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriend" ref="tourfriend4" />
+		<property name="route" ref="route3" />
+	</bean>
+	
+	<bean id="event5" class="domain.Event">
+		<property name="name"
+			value="Córdoba califal" />
+		<property name="overview"
+			value="Visitaremos el centro histórico de Córdoba, así como perdernos por las calles de la judería." />
+		<property name="price" value="15.00" />
+		<property name="meetingPoint" value="Puente Romano" />
+		<property name="minPeople" value="5" />
+		<property name="maxPeople" value="15" />
+		<property name="date" value="05/27/2017 15:00:00" />
+		<property name="duration" value="3.0" />
+		<property name="isCancelled" value="false" />
+		<property name="thingsToNote"
+			value="Ropa cómoda para andar por la ciudad" />
+		<property name="commentEvents">
+			<list>
+			</list>
+		</property>
+		<property name="bookings">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriend" ref="tourfriend4" />
+		<property name="route" ref="route3" />
+	</bean>
+
+	<bean id="event6" class="domain.Event">
+		<property name="name"
+			value="Vereda de Vado Negro por la Cuesta de las Ermitas de Córdoba" />
+		<property name="overview"
+			value="Visitaremos numerosas ermitas escondidas a lo largo de la Sierra de Córdoba en una ruta de 35km" />
+		<property name="price" value="10.00" />
+		<property name="meetingPoint" value="Avenida de América" />
+		<property name="minPeople" value="5" />
+		<property name="maxPeople" value="10" />
+		<property name="date" value="05/12/2017 10:00:00" />
+		<property name="duration" value="4.0" />
+		<property name="isCancelled" value="false" />
+		<property name="thingsToNote"
+			value="Traer vuestra bicicleta y agua para hidratarse" />
+		<property name="commentEvents">
+			<list>
+			</list>
+		</property>
+		<property name="bookings">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriend" ref="tourfriend4" />
+		<property name="route" ref="route4" />
+	</bean>
+	
+	<bean id="event7" class="domain.Event">
+		<property name="name"
+			value="Visita turística a Morón de la Frontera" />
+		<property name="overview"
+			value="Visitaremos la catedral de Morón, así como su monomento conocido nacionalmente llamado popularmente El Gallo de Morón" />
+		<property name="price" value="10.00" />
+		<property name="meetingPoint" value="Ayuntamiento de Morón de la Frontera" />
+		<property name="minPeople" value="5" />
+		<property name="maxPeople" value="10" />
+		<property name="date" value="05/06/2017 12:00:00" />
+		<property name="duration" value="4.0" />
+		<property name="isCancelled" value="false" />
+		<property name="thingsToNote"><null/></property>	
+		<property name="commentEvents">
+			<list>
+			</list>
+		</property>
+		<property name="bookings">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriend" ref="tourfriend7" />
+		<property name="route" ref="route5" />
+	</bean>
+	
+	<bean id="event8" class="domain.Event">
+		<property name="name"
+			value="Visita turística a Morón de la Frontera" />
+		<property name="overview"
+			value="Visitaremos la catedral de Morón, así como su monomento conocido nacionalmente llamado popularmente El Gallo de Morón" />
+		<property name="price" value="30.00" />
+		<property name="meetingPoint" value="Ayuntamiento de Morón de la Frontera" />
+		<property name="minPeople" value="5" />
+		<property name="maxPeople" value="10" />
+		<property name="date" value="04/23/2017 12:00:00" />
+		<property name="duration" value="4.0" />
+		<property name="isCancelled" value="false" />
+		<property name="thingsToNote"><null/></property>	
+		<property name="commentEvents">
+			<list>
+			</list>
+		</property>
+		<property name="bookings">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriend" ref="tourfriend7" />
+		<property name="route" ref="route5" />
+	</bean>
+	
+	<bean id="event9" class="domain.Event">
+		<property name="name"
+			value="Visita turística nocturna a Morón de la Frontera" />
+		<property name="overview"
+			value="Visita nocturna a la catedral de Morón, así como su monomento conocido nacionalmente llamado popularmente El Gallo de Morón" />
+		<property name="price" value="10.00" />
+		<property name="meetingPoint" value="Ayuntamiento de Morón de la Frontera" />
+		<property name="minPeople" value="5" />
+		<property name="maxPeople" value="10" />
+		<property name="date" value="06/11/2017 20:00:00" />
+		<property name="duration" value="4.0" />
+		<property name="isCancelled" value="false" />
+		<property name="thingsToNote"><null/></property>	
+		<property name="commentEvents">
+			<list>
+			</list>
+		</property>
+		<property name="bookings">
+			<list>
+			</list>
+		</property>
+		<property name="tourFriend" ref="tourfriend7" />
+		<property name="route" ref="route5" />
+	</bean>
+
+	<!-- MESSAGES -->
+
+	<bean id="message1" class="domain.Message">
+		<property name="subject" value="Ruta bicicleta" />
+		<property name="body"
+			value="He visto tu ruta sobre la bajada en la montaña, me gustaria que me hablaras un poco más de ella" />
+		<property name="sentMoment" value="02/10/2017 12:20" />
+		<property name="isRead" value="true" />
+		<property name="isRecipientCopy" value="false" />
+		<property name="senderActor" ref="tourfriend3" />
+		<property name="recipientActor" ref="tourfriend2" />
+	</bean>
+
+	<bean id="message2" class="domain.Message">
+		<property name="subject" value="Ruta bicicleta" />
+		<property name="body"
+			value="He visto tu ruta sobre la bajada en la montaña, me gustaria que me hablaras un poco más de ella" />
+		<property name="sentMoment" value="02/10/2017 12:20" />
+		<property name="isRead" value="true" />
+		<property name="isRecipientCopy" value="true" />
+		<property name="senderActor" ref="tourfriend3" />
+		<property name="recipientActor" ref="tourfriend2" />
+	</bean>
+
+	<bean id="message3" class="domain.Message">
+		<property name="subject" value="Re: Ruta bicicleta" />
+		<property name="body"
+			value="Pues bajamos la montaña a la máxima velocidad posible, por lo tanto debes de tener experiencia previa y despues invito a una barbacoa en mi chalet" />
+		<property name="sentMoment" value="02/10/2017 12:25" />
+		<property name="isRead" value="true" />
+		<property name="isRecipientCopy" value="false" />
+		<property name="senderActor" ref="tourfriend2" />
+		<property name="recipientActor" ref="tourfriend3" />
+	</bean>
+
+	<bean id="message4" class="domain.Message">
+		<property name="subject" value="Re: Ruta bicicleta" />
+		<property name="body"
+			value="Pues bajamos la montaña a la máxima velocidad posible, por lo tanto debes de tener experiencia previa y despues invito a una barbacoa en mi chalet" />
+		<property name="sentMoment" value="02/10/2017 12:25" />
+		<property name="isRead" value="true" />
+		<property name="isRecipientCopy" value="true" />
+		<property name="senderActor" ref="tourfriend2" />
+		<property name="recipientActor" ref="tourfriend3" />
+	</bean>
+	
+	<bean id="message5" class="domain.Message">
+		<property name="subject" value="Pregunta sobre el evento" />
+		<property name="body"
+			value="Es muy dura la ruta en bicicleta??" />
+		<property name="sentMoment" value="01/02/2017 10:00:00" />
+		<property name="isRead" value="true" />
+		<property name="isRecipientCopy" value="false" />
+		<property name="senderActor" ref="tourfriend4" />
+		<property name="recipientActor" ref="tourfriend2" />
+	</bean>
+	
+	<bean id="message6" class="domain.Message">
+		<property name="subject" value="Pregunta sobre el evento" />
+		<property name="body"
+			value="Es muy dura la ruta en bicicleta??" />
+		<property name="sentMoment" value="01/02/2017 10:00:00" />
+		<property name="isRead" value="false" />
+		<property name="isRecipientCopy" value="true" />
+		<property name="senderActor" ref="tourfriend4" />
+		<property name="recipientActor" ref="tourfriend2" />
+	</bean>
+	
+	<bean id="message7" class="domain.Message">
+		<property name="subject" value="Respuesta sobre la dureza del evento" />
+		<property name="body"
+			value="Es para gente experimentada, pero estoy seguro de que podrás" />
+		<property name="sentMoment" value="01/02/2017 11:00:00" />
+		<property name="isRead" value="true" />
+		<property name="isRecipientCopy" value="false" />
+		<property name="senderActor" ref="tourfriend2" />
+		<property name="recipientActor" ref="tourfriend4" />
+	</bean>
+	
+	<bean id="message8" class="domain.Message">
+		<property name="subject" value="Respuesta sobre la dureza del evento" />
+		<property name="body"
+			value="Es para gente experimentada, pero estoy seguro de que podrás" />
+		<property name="sentMoment" value="01/02/2017 11:00:00" />
+		<property name="isRead" value="false" />
+		<property name="isRecipientCopy" value="true" />
+		<property name="senderActor" ref="tourfriend2" />
+		<property name="recipientActor" ref="tourfriend4" />
+	</bean>
+	
+	<bean id="message9" class="domain.Message">
+		<property name="subject" value="¿Que se enseña de Córdoba" />
+		<property name="body"
+			value="Me interesaría pasar por la muralla romana, está incluida?" />
+		<property name="sentMoment" value="04/22/2017 15:00:00" />
+		<property name="isRead" value="true" />
+		<property name="isRecipientCopy" value="false" />
+		<property name="senderActor" ref="tourfriend2" />
+		<property name="recipientActor" ref="tourfriend4" />
+	</bean>
+	
+	<bean id="message10" class="domain.Message">
+		<property name="subject" value="¿Que se enseña de Córdoba" />
+		<property name="body"
+			value="Me interesaría pasar por la muralla romana, está incluida?" />
+		<property name="sentMoment" value="04/22/2017 15:00:00" />
+		<property name="isRead" value="false" />
+		<property name="isRecipientCopy" value="true" />
+		<property name="senderActor" ref="tourfriend2" />
+		<property name="recipientActor" ref="tourfriend4" />
+	</bean>
+	
+	<bean id="message11" class="domain.Message">
+		<property name="subject" value="Cordoba y la muralla" />
+		<property name="body"
+			value="Si claro, se incluye en el viaje" />
+		<property name="sentMoment" value="04/22/2017 19:00:00" />
+		<property name="isRead" value="true" />
+		<property name="isRecipientCopy" value="false" />
+		<property name="senderActor" ref="tourfriend4" />
+		<property name="recipientActor" ref="tourfriend2" />
+	</bean>
+	
+	<bean id="message12" class="domain.Message">
+		<property name="subject" value="Cordoba y la muralla" />
+		<property name="body"
+			value="Si claro, se incluye en el viaje" />
+		<property name="sentMoment" value="04/22/2017 19:00:00" />
+		<property name="isRead" value="false" />
+		<property name="isRecipientCopy" value="true" />
+		<property name="senderActor" ref="tourfriend4" />
+		<property name="recipientActor" ref="tourfriend2" />
+	</bean>
+	
+	<bean id="message13" class="domain.Message">
+		<property name="subject" value="¿Que se enseña de Córdoba II" />
+		<property name="body"
+			value="Vale, pero también me interesa ir al CorteIngles a comprar" />
+		<property name="sentMoment" value="04/22/2017 19:30:00" />
+		<property name="isRead" value="true" />
+		<property name="isRecipientCopy" value="false" />
+		<property name="senderActor" ref="tourfriend2" />
+		<property name="recipientActor" ref="tourfriend4" />
+	</bean>
+	
+	<bean id="message14" class="domain.Message">
+		<property name="subject" value="¿Que se enseña de Córdoba II" />
+		<property name="body"
+			value="Vale, pero también me interesa ir al CorteIngles a comprar" />
+		<property name="sentMoment" value="04/22/2017 19:30:00" />
+		<property name="isRead" value="false" />
+		<property name="isRecipientCopy" value="true" />
+		<property name="senderActor" ref="tourfriend2" />
+		<property name="recipientActor" ref="tourfriend4" />
+	</bean>
+	
+	<bean id="message15" class="domain.Message">
+		<property name="subject" value="Asi no vienes" />
+		<property name="body"
+			value="Para ir al corte ingles no vengas a este evento.." />
+		<property name="sentMoment" value="04/22/2017 21:00:00" />
+		<property name="isRead" value="true" />
+		<property name="isRecipientCopy" value="false" />
+		<property name="senderActor" ref="tourfriend4" />
+		<property name="recipientActor" ref="tourfriend2" />
+	</bean>
+	
+	<bean id="message16" class="domain.Message">
+		<property name="subject" value="Asi no vienes" />
+		<property name="body"
+			value="Para ir al corte ingles no vengas a este evento.." />
+		<property name="sentMoment" value="04/22/2017 21:00:00" />
+		<property name="isRead" value="false" />
+		<property name="isRecipientCopy" value="true" />
+		<property name="senderActor" ref="tourfriend4" />
+		<property name="recipientActor" ref="tourfriend2" />
+	</bean>
+	
+	
+
+	<!-- COUPON -->
+
+	<bean id="coupon1" class="domain.Coupon">
+		<property name="name" value="Gran viajante" />
+		<property name="description" value="Cupón para los verdaderos viajeros, para que puedan llegar a cualquier lugar" />
+		<property name="value" value="50.00" />
+		<property name="points" value="250" />
+		<property name="isDisabled" value="false" />
+	</bean>
+
+	<bean id="coupon2" class="domain.Coupon">
+		<property name="name" value="Tortuga" />
+		<property name="description" value="Tienes unos puntillos de sobra, este es tu cupón" />
+		<property name="value" value="5.00" />
+		<property name="points" value="40" />
+		<property name="isDisabled" value="false" />
+	</bean>
+
+	<bean id="coupon3" class="domain.Coupon">
+		<property name="name" value="Informático" />
+		<property name="description" value="Cupón para que puedas salir de tu casa anda, que te de el sol!" />
+		<property name="value" value="10.00" />
+		<property name="points" value="50" />
+		<property name="isDisabled" value="true" />
+	</bean>
+	
+	<bean id="coupon4" class="domain.Coupon">
+		<property name="name" value="Ratilla" />
+		<property name="description" value="Eres rápido cual rata, pues canjeame" />
+		<property name="value" value="20.00" />
+		<property name="points" value="140" />
+		<property name="isDisabled" value="true" />
+	</bean>
+
+	<!-- CODE -->
+
+	<bean id="code1" class="domain.Code">
+		<property name="value" value="2aSe3Ac4" />
+		<property name="isVerified" value="false" />
+	</bean>
+
+	<bean id="code2" class="domain.Code">
+		<property name="value" value="1DoE1231" />
+		<property name="isVerified" value="false" />
+	</bean>
+
+	<bean id="code3" class="domain.Code">
+		<property name="value" value="sDSA25a4" />
+		<property name="isVerified" value="false" />
+	</bean>
+
+	<bean id="code4" class="domain.Code">
+		<property name="value" value="as234ASD" />
+		<property name="isVerified" value="false" />
+	</bean>
+
+	<bean id="code5" class="domain.Code">
+		<property name="value" value="5ASD1231" />
+		<property name="isVerified" value="true" />
+	</bean>
+
+
+	<bean id="code6" class="domain.Code">
+		<property name="value" value="asdas231" />
+		<property name="isVerified" value="true" />
+	</bean>
+
+	<!-- PAYMENT -->
+
+	<bean id="payment1" class="domain.Payment">
+		<property name="amount" value="15.0" />
+		<property name="paymentMoment" value="2/03/2017 12:00" />
+		<property name="status" value="SUCCESSFUL" />
+	</bean>
+
+	<bean id="payment2" class="domain.Payment">
+		<property name="amount" value="28.0" />
+		<property name="paymentMoment" value="1/01/2017 13:00" />
+		<property name="status" value="SUCCESSFUL" />
+	</bean>
+
+	<bean id="payment3" class="domain.Payment">
+		<property name="amount" value="21.0" />
+		<property name="paymentMoment" value="02/02/2017 13:00" />
+		<property name="status" value="SUCCESSFUL" />
+	</bean>
+
+	<bean id="payment4" class="domain.Payment">
+		<property name="amount" value="21.0" />
+		<property name="paymentMoment" value="03/02/2017 13:00" />
+		<property name="status" value="SUCCESSFUL" />
+	</bean>
+
+	<bean id="payment5" class="domain.Payment">
+		<property name="amount" value="15.0" />
+		<property name="paymentMoment" value="02/04/2017 01:00" />
+		<property name="status" value="SUCCESSFUL" />
+	</bean>
+
+	<bean id="payment6" class="domain.Payment">
+		<property name="amount" value="21.0" />
+		<property name="paymentMoment" value="01/02/2017 13:00" />
+		<property name="status" value="SUCCESSFUL" />
+	</bean>
+
+	<!-- BOOKING -->
+
+	<bean id="booking1" class="domain.Booking">
+		<property name="bookingMoment" value="01/01/2017 12:00" />
+		<property name="isCancelled" value="false" />
+		<property name="isPaied" value="true" />
+		<property name="numPeople" value="1" />
+		<property name="code" ref="code1" />
+		<property name="tourFriend" ref="tourfriend3" />
+		<property name="event" ref="event1" />
+		<property name="payment" ref="payment1" />
+	</bean>
+	
+	<bean id="booking2" class="domain.Booking">
+		<property name="bookingMoment" value="03/01/2017 13:00" />
+		<property name="isCancelled" value="false" />
+		<property name="isPaied" value="true" />
+		<property name="numPeople" value="2" />
+		<property name="code" ref="code2" />
+		<property name="tourFriend" ref="tourfriend4" />
+		<property name="event" ref="event1" />
+		<property name="payment" ref="payment2" />
+	</bean>
+	
+	<bean id="booking3" class="domain.Booking">
+		<property name="bookingMoment" value="02/02/2017 13:00" />
+		<property name="isCancelled" value="false" />
+		<property name="isPaied" value="true" />
+		<property name="numPeople" value="1" />
+		<property name="code" ref="code3" />
+		<property name="tourFriend" ref="tourfriend2" />
+		<property name="event" ref="event4" />
+		<property name="payment" ref="payment3" />
+	</bean>
+
+	<bean id="booking4" class="domain.Booking">
+		<property name="bookingMoment" value="04/02/2017 13:00" />
+		<property name="isCancelled" value="false" />
+		<property name="isPaied" value="true" />
+		<property name="numPeople" value="1" />
+		<property name="code" ref="code4" />
+		<property name="tourFriend" ref="tourfriend3" />
+		<property name="event" ref="event4" />
+		<property name="payment" ref="payment4" />
+	</bean>
+	
+	<bean id="booking5" class="domain.Booking">
+		<property name="bookingMoment" value="04/04/2017 01:00" />
+		<property name="isCancelled" value="true" />
+		<property name="isPaied" value="true" />
+		<property name="numPeople" value="1" />
+		<property name="code" ref="code5" />
+		<property name="tourFriend" ref="tourfriend2" />
+		<property name="event" ref="event5" />
+		<property name="payment" ref="payment5" />
+	</bean>
+	
+	<bean id="booking6" class="domain.Booking">
+		<property name="bookingMoment" value="01/02/2017 13:00" />
+		<property name="isCancelled" value="false" />
+		<property name="isPaied" value="true" />
+		<property name="numPeople" value="1" />
+		<property name="code" ref="code6" />
+		<property name="tourFriend" ref="tourfriend5" />
+		<property name="event" ref="event4" />
+		<property name="payment" ref="payment6" />
+	</bean>
+</beans>

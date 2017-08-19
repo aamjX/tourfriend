@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- * tiles_es.xml * * Copyright (C) 2017 Universidad de Sevilla * * The 
+	use of this project is hereby constrained to the conditions of the * TDG 
+	Licence, a copy of which you may download from * http://www.tdg-seville.info/License.html -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="tourFriend/signUp" extends="master.page">
+		<put-attribute name="title" value="Registrar TourFriend" />
+		<put-attribute name="body" value="/views/tourFriend/signUp.jsp" />
+	</definition>
+
+	<definition name="tourFriend/display" extends="master.page">
+		<put-attribute name="title" value="Mostrar Perfil" />
+		<put-attribute name="body" value="/views/tourFriend/display.jsp" />
+	</definition>
+
+	<definition name="tourFriend/withdraw" extends="master.page">
+		<put-attribute name="title" value="Retirar saldo" />
+		<put-attribute name="body" value="/views/tourFriend/withdraw.jsp" />
+	</definition>
+
+	<definition name="tourFriend/edit" extends="master.page">
+		<put-attribute name="title" value="Editar my perfil" />
+		<put-attribute name="body" value="/views/tourFriend/edit.jsp" />
+	</definition>
+
+	<definition name="tourFriend/list" extends="master.page">
+		<put-attribute name="title" value="TourFriends" />
+		<put-attribute name="body" value="/views/tourFriend/admin/list.jsp" />
+	</definition>
+
+	<definition name="tourFriend/newPasswordForm" extends="master.page">
+		<put-attribute name="title" value="Establecer una contraseña" />
+		<put-attribute name="body"
+			value="/views/tourFriend/newPasswordForm.jsp" />
+	</definition>
+
+	<definition name="tourFriend/passwordConfirmation" extends="master.page">
+		<put-attribute name="title" value="Establecer una contraseña" />
+		<put-attribute name="body"
+			value="/views/tourFriend/passwordConfirmation.jsp" />
+	</definition>
+
+</tiles-definitions>

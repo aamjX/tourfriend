@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+      
+<tiles-definitions>
+
+	<definition name="route/list" extends="master.page">	
+		<put-attribute name="title" value="Lista de rutas" />
+		<put-attribute name="body" value="/views/route/list.jsp" />
+	</definition>
+	
+	<definition name="route/step-1" extends="master.page">	
+		<put-attribute name="title" value="Crear nueva ruta" />
+		<put-attribute name="body" value="/views/route/create.jsp" />
+	</definition>
+	<definition name="route/edit" extends="master.page">
+		<put-attribute name="title" value="Editar una ruta" />
+		<put-attribute name="body" value="/views/route/edit.jsp" />
+	</definition>
+	<definition name="route/display" extends="master.page">
+		<put-attribute name="title" value="Detalles de la ruta" />
+		<put-attribute name="body" value="/views/route/display.jsp" />
+	</definition>
+</tiles-definitions>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+	<definition name="coupon/list" extends="master.page">	
+		<put-attribute name="title" value="Coupon list" />
+		<put-attribute name="body" value="/views/coupon/list.jsp" />
+	</definition>
+	
+	<definition name="coupon/create" extends="master.page">	
+		<put-attribute name="title" value="Create coupon" />
+		<put-attribute name="body" value="/views/coupon/edit.jsp" />
+	</definition>
+	
+		<definition name="coupon/confirmationCoupon" extends="master.page">
+		<put-attribute name="title" value="Confirmation?" />
+		<put-attribute name="body"
+			value="/views/coupon/confirmationCoupon.jsp" />
+	</definition>
+	
+</tiles-definitions>
